@@ -1,0 +1,635 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #764ba2;
+}
+
+button {
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+  font-family: inherit;
+  width: 100%;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* KEYFRAME ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* BACKGROUND SLIDER ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+@keyframes backgroundSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundSlideReverse {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatBg {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes waveBg {
+  0%, 100% {
+    transform: translateX(0) skewX(0deg);
+  }
+  50% {
+    transform: translateX(10px) skewX(2deg);
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes orb1 {
+  0%, 100% {
+    top: 0%;
+    left: 10%;
+  }
+  25% {
+    top: 20%;
+    left: 30%;
+  }
+  50% {
+    top: 40%;
+    left: 10%;
+  }
+  75% {
+    top: 20%;
+    left: -10%;
+  }
+}
+
+@keyframes orb2 {
+  0%, 100% {
+    top: 50%;
+    right: 10%;
+  }
+  25% {
+    top: 30%;
+    right: 30%;
+  }
+  50% {
+    top: 10%;
+    right: 10%;
+  }
+  75% {
+    top: 30%;
+    right: -10%;
+  }
+}
+
+@keyframes orb3 {
+  0%, 100% {
+    bottom: 10%;
+    right: 20%;
+  }
+  50% {
+    bottom: 30%;
+    right: 40%;
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* ANIMATED GRADIENT BACKGROUNDS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* ANIMATED GRADIENT BACKGROUNDS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+.gradient-animated {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.gradient-animated-hero {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #FF6B6B, #4ecdc4);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Background Slider for Sections */
+.bg-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #f093fb,
+    #4facfe,
+    #667eea
+  );
+  background-size: 300% 300%;
+  animation: backgroundSlide 20s ease infinite;
+  z-index: 1;
+}
+
+.bg-slider-reverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #FF6B6B,
+    #4ecdc4,
+    #667eea,
+    #764ba2,
+    #FF6B6B
+  );
+  background-size: 300% 300%;
+  animation: backgroundSlideReverse 25s ease infinite;
+  z-index: 1;
+}
+
+/* Floating Orbs Background */
+.orb-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(40px);
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #667eea, transparent);
+  animation: orb1 15s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #764ba2, transparent);
+  animation: orb2 18s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #f093fb, transparent);
+  animation: orb3 20s ease-in-out infinite;
+}
+
+/* Floating Background Shapes */
+.floating-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: floatBg 8s ease-in-out infinite;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Wave Background */
+.wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: waveBg 4s ease-in-out infinite;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* SECTION ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  animation: slideInRight 0.8s ease forwards;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* NAVBAR ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+nav {
+  animation: slideInDown 0.6s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* CARD ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* BUTTON ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* SKILL BADGE ANIMATIONS */
+/* ═════════════════════════════════════════════════════════════════ */
+
+.skill-badge {
+  animation: scaleIn 0.5s ease backwards;
+  position: relative;
+}
+
+.skill-badge:nth-child(1) { animation-delay: 0.1s; }
+.skill-badge:nth-child(2) { animation-delay: 0.2s; }
+.skill-badge:nth-child(3) { animation-delay: 0.3s; }
+.skill-badge:nth-child(4) { animation-delay: 0.4s; }
+.skill-badge:nth-child(5) { animation-delay: 0.5s; }
+.skill-badge:nth-child(6) { animation-delay: 0.6s; }
+.skill-badge:nth-child(7) { animation-delay: 0.7s; }
+.skill-badge:nth-child(8) { animation-delay: 0.8s; }
+
+.skill-badge:hover {
+  animation: pulse 1s;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* SCROLLBAR STYLING */
+/* ═════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* PARALLAX BACKGROUND EFFECT */
+/* ═════════════════════════════════════════════════════════════════ */
+
+.parallax-bg {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* TEXT ANIMATION */
+/* ═════════════════════════════════════════════════════════════════ */
+
+.text-glow {
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE */
+/* ═════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
